@@ -9,7 +9,6 @@ setup(
     author='Kane Galba',
     author_email='kane@galba.co',
     description='Lightweight python module to allow extracting text from OpenDocument (odt) files.',
-    packages=find_packages(exclude=['tests']),
     zip_safe=False,
     include_package_data=True,
     platforms='any',
