@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
  
 setup(
     name='ODTReader',
-    version='0.0.1',
+    version='0.0.2',
     url='https://github.com/KaneGalba/ODTReader/',
     download_url='https://github.com/KaneGalba/ODTReader/archive/master.zip',
     author='Kane Galba',

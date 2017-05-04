@@ -1,3 +1,4 @@
+README.rst
 setup.py
 ODTReader.egg-info/PKG-INFO
 ODTReader.egg-info/SOURCES.txt
