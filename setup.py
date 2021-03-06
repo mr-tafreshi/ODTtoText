@@ -1,16 +1,13 @@
 from setuptools import setup, find_packages
  
 setup(
-    name='ODTReader',
-    packages = ['ODTReader'],
+    name='ODTtoText'
+    packages = ['ODTtoText'],
     version='0.0.3',
-    url='https://github.com/KaneGalba/ODTReader/',
-    download_url='https://github.com/KaneGalba/ODTReader/archive/master.zip',
-    author='Kane Galba',
-    author_email='kane@galba.co',
-    description='Lightweight python module to allow extracting text from OpenDocument (odt) files.',
-    zip_safe=False,
-    include_package_data=True,
+    url='https://github.com/mr-tafreshi/ODTtoText',
+    author='Amirmahdi Tafreshi',
+    author_email='a.tafreshi440@gmail.com',
+    description='ODT files to text in python(3)',
     platforms='any',
     license='GPL',
     install_requires=[],

@@ -5,10 +5,10 @@ import argparse
 import sys
 
 if sys.platform == "win32":
-	import win32_unicode_argv
+	from . import win32_unicode_argv
 
 def textOrTail(elem):
-	total = u""
+	total = ""
 	tort = elem.text or elem.tail
 	if tort: total += tort
 	for child in elem:
@@ -18,18 +18,18 @@ def textOrTail(elem):
 def odtToText(odtPath):
 	with ZipFile(odtPath, 'r') as odtArchive:
 		try:
-			with odtArchive.open(u'content.xml') as f:
+			with odtArchive.open('content.xml') as f:
 				odtContent = f.read()
 		except Exception as e:
-			print "Could not find 'content.xml': {}".format(str(e))
+			print(("Could not find 'content.xml': {}".format(str(e))))
 			return
 		
 		root = ET.fromstring(odtContent)
-		total = u""
+		total = ""
 		for child in root.find('{urn:oasis:names:tc:opendocument:xmlns:office:1.0}body').find('{urn:oasis:names:tc:opendocument:xmlns:office:1.0}text'):
 			if child.tag == "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p":
-				total += textOrTail(child) + u"\n"
-		if total and total[-1] == u"\n":
+				total += textOrTail(child) + "\n"
+		if total and total[-1] == "\n":
 			total = total[:-1]
 		return total
 
@@ -44,4 +44,4 @@ if __name__ == "__main__":
 		with open(args.out, "w") as outFile:
 			outFile.write(output)
 	else:
-		print output
+		print(output)

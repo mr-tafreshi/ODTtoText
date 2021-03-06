@@ -41,6 +41,6 @@ def win32_unicode_argv():
         # Remove Python executable and commands if present
         start = argc.value - len(sys.argv)
         return [argv[i] for i in
-                xrange(start, argc.value)]
+                range(start, argc.value)]
 
 sys.argv = win32_unicode_argv()
