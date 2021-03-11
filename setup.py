@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name='ODTtoText'
     packages = ['ODTtoText'],
-    version='0.0.3',
+    version='0.0.1',
     url='https://github.com/mr-tafreshi/ODTtoText',
     author='Amirmahdi Tafreshi',
     author_email='a.tafreshi440@gmail.com',
