@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
  
 setup(
-    name='ODTtoText'
-    packages = ['ODTtoText'],
+    name='ODTtoText',
+    packages = setuptools.find_packages(),
     version='0.0.1',
     url='https://github.com/mr-tafreshi/ODTtoText',
     author='Amirmahdi Tafreshi',
